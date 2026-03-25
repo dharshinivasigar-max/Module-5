@@ -21,7 +21,7 @@ The program defines a class `Demo` with:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-```
+~~~
 class Demo:
   
     def __init__(self):
@@ -34,7 +34,7 @@ class Demo:
  Outside the class:
 
 obj = Demo()
-```
+~~~
 ## 🧪 Output
 Object created. Status: Alive
 Destructor called, object is being destroyed.
