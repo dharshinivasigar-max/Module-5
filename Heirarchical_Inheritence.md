@@ -23,7 +23,7 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
   - Method: `getPatientDetails()`
 
 ## 🧠 Algorithm
-```
+
 1. Create base class `Details` with common attributes.
 2. Create `Employee` class extending `Details`, adding employee-specific data.
 3. Create `Patient` class extending `Details`, adding patient-specific data.
@@ -31,7 +31,7 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-
+~~~
 class Details:
     def __init__(self, name, age):
         self.name = name
@@ -85,7 +85,7 @@ pat = Patient(pname, page, pid, disease)
 
 emp.getEmployeeDetails()
 pat.getPatientDetails()
-```
+~~~
 ## Sample Output
 Enter Employee Name: Ravi
 Enter Employee Age: 30
