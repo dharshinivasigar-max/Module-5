@@ -21,9 +21,25 @@ The program defines a class `Demo` with:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-Add code Here
+```
+class Demo:
+  
+    def __init__(self):
+      
+        self.status = "Alive"
+        print(f"Object created. Status: {self.status}")
 
+    def __del__(self):
+        print("Destructor called, object is being destroyed.")
+ Outside the class:
+
+obj = Demo()
+```
 ## 🧪 Output
+Object created. Status: Alive
+Destructor called, object is being destroyed.
 
 ## Result
+The __init__ method is automatically called when the object obj is instantiated, setting the status to "Alive".
+The __del__ method is triggered when the del keyword is used, effectively cleaning up the object and printing the destruction message.
 
