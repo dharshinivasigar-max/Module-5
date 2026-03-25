@@ -26,7 +26,7 @@ To write a Python program that uses multilevel inheritance to get and display a 
    - Print all details using class methods.
 
 ## Program
-```
+~~~
 class Parent:
     def __init__(self, name):
         self.name = name
@@ -65,8 +65,7 @@ if __name__ == "__main__":
     print(f"Name: {person.getName()}")
     print(f"Age: {person.getAge()}")
     print(f"Location: {person.getLocation()}")
-```
-
+~~~
 ## Sample Output
 Enter Name: John Doe
 Enter Age: 25
