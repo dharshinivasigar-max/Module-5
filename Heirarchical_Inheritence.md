@@ -23,7 +23,7 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
   - Method: `getPatientDetails()`
 
 ## 🧠 Algorithm
-
+```
 1. Create base class `Details` with common attributes.
 2. Create `Employee` class extending `Details`, adding employee-specific data.
 3. Create `Patient` class extending `Details`, adding patient-specific data.
@@ -31,6 +31,80 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
-## Sample Output
 
+class Details:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+class Employee(Details):
+    def __init__(self, name, age, employee_id, department):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+        self.department = department
+
+    def getEmployeeDetails(self):
+        print("\n--- Employee Details ---")
+        print("Name:", self.getName())
+        print("Age:", self.getAge())
+        print("Employee ID:", self.employee_id)
+        print("Department:", self.department)
+
+class Patient(Details):
+    def __init__(self, name, age, patient_id, disease):
+        super().__init__(name, age)
+        self.patient_id = patient_id
+        self.disease = disease
+
+    def getPatientDetails(self):
+        print("\n--- Patient Details ---")
+        print("Name:", self.getName())
+        print("Age:", self.getAge())
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+
+ename = input("Enter Employee Name: ")
+eage = int(input("Enter Employee Age: "))
+eid = input("Enter Employee ID: ")
+dept = input("Enter Department: ")
+
+pname = input("\nEnter Patient Name: ")
+page = int(input("Enter Patient Age: "))
+pid = input("Enter Patient ID: ")
+disease = input("Enter Disease: ")
+
+emp = Employee(ename, eage, eid, dept)
+pat = Patient(pname, page, pid, disease)
+
+emp.getEmployeeDetails()
+pat.getPatientDetails()
+```
+## Sample Output
+Enter Employee Name: Ravi
+Enter Employee Age: 30
+Enter Employee ID: E101
+Enter Department: IT
+
+Enter Patient Name: Meena
+Enter Patient Age: 25
+Enter Patient ID: P202
+Enter Disease: Fever
+
+--- Employee Details ---
+Name: Ravi
+Age: 30
+Employee ID: E101
+Department: IT
+
+--- Patient Details ---
+Name: Meena
+Age: 25
+Patient ID: P202
+Disease: Fever
